@@ -2,6 +2,97 @@
 {% load static %}
 {% block title %}Home{% endblock title %}
 
+{% block banner_slider %}
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/b1.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b4.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock banner_slider %}
+
+{% block information %}
+<div class="container">
+    <div class="row bg-info text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class=fs-5>
+            We offers a wide range of products of various categories. The cake's are very yummy and tasty. 
+            Variants type of cakes, articles, banquets, books are available.   
+        </small>
+    </div>
+
+    <div class="row bg-warning text-center p-5 text-dark border-bottom shadow">
+        <h1>Products</h1>
+        <small class=fs-5>
+            We offers a wide range of products of various categories. The cake's are very yummy and tasty. 
+            Variants type of cakes, articles, banquets, books are available.   
+        </small>
+    </div>
+</div>
+{% endblock information %}
+
+
+
 {% block main-content %}
-<h1>My Django Welcome you... </h1>
+<div class="container">
+    <div  class="row text-center text-dark">
+        <h1>My Django Welcome you... </h1>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">    
+            <div class="card">
+                <img src="{% static 'app/images/logo/cake.png' %}" class="card-img-top" height="50%" alt="cake">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div class="card">
+            <img src="{% static 'app/images/logo/cake45.png' %}" class="card-img-top" height="50%" alt="cake products">
+            <div class="card-body text-center">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+            <img src="{% static 'app/images/logo/cake56.png' %}" class="card-img-top" height="50%" alt="cake products">
+            <div class="card-body text-center">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    <br> <br>
 {% endblock main-content %}
