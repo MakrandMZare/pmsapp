@@ -28,10 +28,11 @@
                 Products
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Cake</a></li>
-                <li><a class="dropdown-item" href="#">Gifts</a></li>
-                <li><a class="dropdown-item" href="#">Flower</a></li>
-                <li><a class="dropdown-item" href="#">Articles</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'CK' %}">Cakes</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'BC' %}">Biscuits</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'BD' %}">Breads</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'BK' %}">Books</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'BU' %}">Flowers Buke</a></li>
               </ul>
             </li>
             <li class="nav-item">

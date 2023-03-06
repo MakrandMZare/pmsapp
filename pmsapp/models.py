@@ -6,7 +6,7 @@ CATEGORY_CHOICES=(
     ('BC', 'Biscuits'),
     ('BD', 'Breads'),
     ('BK', 'Books'),
-    ('BU', 'Buke'),    
+    ('BU', 'Flowers Buke'),    
 )
 
 
