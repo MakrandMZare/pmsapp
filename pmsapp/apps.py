@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class App23Config(AppConfig):
+class PmsAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'app23'
+    name = 'pmsapp'
