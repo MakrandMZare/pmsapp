@@ -57,39 +57,63 @@
         <h1>My Django Welcome you... </h1>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">    
-            <div class="card">
+    <div class="row container">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">    
+            <div class="card text-center">
+                <h5 class="card-title">Cakes</h5>
+                <a href="{% url 'category' 'CK' %}">
                 <img src="{% static 'app/images/logo/cake.png' %}" class="card-img-top" height="50%" alt="cake">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+                </a>
             </div>
         </div>
         
-        <div class="col">
-            <div class="card">
-            <img src="{% static 'app/images/logo/cake45.png' %}" class="card-img-top" height="50%" alt="cake products">
-            <div class="card-body text-center">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">    
+            <div class="card text-center">
+                <h5 class="card-title">Books</h5>
+                <a href="{% url 'category' 'BK' %}">
+                    <img src="{% static 'app/images/logo/customslaw.jpg' %}" class="card-img-top" height="50%" alt="cake products">
+                </a>
             </div>
         </div>
 
-        <div class="col">
-            <div class="card">
-            <img src="{% static 'app/images/logo/cake56.png' %}" class="card-img-top" height="50%" alt="cake products">
-            <div class="card-body text-center">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">    
+            <div class="card text-center">
+                <h5 class="card-title">Biscuits</h5>
+                <a href="{% url 'category' 'BC' %}">
+                    <img src="{% static 'app/images/logo/biscuitchoco.jpg' %}" class="card-img-top" height="50%" alt="cake products">
+                </a>
             </div>
         </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">    
+            <div class="card text-center">
+                <h5 class="card-title">Breads</h5>
+                <a href="{% url 'category' 'BD' %}">
+                    <img src="{% static 'app/images/logo/cherrycread.jpg' %}" class="card-img-top" height="50%" alt="cake products">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">    
+            <div class="card text-center">
+                <h5 class="card-title">Flower Buke</h5>
+                <a href="{% url 'category' 'BU' %}">
+                    <img src="{% static 'app/images/logo/redrose.jpg' %}" class="card-img-top" height="50%" alt="cake products">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">    
+            <div class="card text-center">
+                <h5 class="card-title">Gift Articles</h5>
+                <a href="{% url 'category' 'GA' %}">
+                    <img src="{% static 'app/images/logo/pens-glass.png' %}" class="card-img-top" height="50%" alt="cake products">
+                </a>
+            </div>
+        </div>
+        
+
+        
 
     </div>
 

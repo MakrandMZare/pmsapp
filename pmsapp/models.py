@@ -6,14 +6,15 @@ CATEGORY_CHOICES=(
     ('BC', 'Biscuits'),
     ('BD', 'Breads'),
     ('BK', 'Books'),
-    ('BU', 'Flowers Buke'),    
+    ('BU', 'Flowers Buke'),
+    ('GA', 'Gift Articles'),
 )
 
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
-    selling_price = models.FloatField()
-    discounted_price = models.FloatField()
+    selling_price = models.FloatField(2)
+    discounted_price = models.FloatField(2)
     description = models.TextField()
     composition = models.TextField(default='')
     prodapp = models.TextField(default='')
