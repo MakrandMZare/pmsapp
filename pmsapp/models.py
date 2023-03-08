@@ -22,3 +22,20 @@ class Product(models.Model):
     product_image = models.ImageField(upload_to='product')
     def __str__(self):
         return self.title
+    
+    
+class Registration(models.Model):
+    name = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=50)
+    mobile = models.IntegerField()
+    email = models.EmailField(max_length=250)
+    password1 = models.CharField(max_length=50)
+    password2 = models.CharField(max_length=50)
+    
+class Employee(models.Model):
+    name = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=50)
+    mobile = models.IntegerField()
+    email = models.EmailField(max_length=250)
+    password1 = models.CharField(max_length=50)
+    password2 = models.CharField(max_length=50)
