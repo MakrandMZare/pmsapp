@@ -24,7 +24,7 @@ class Product(models.Model):
         return self.title
     
     
-class Registration(models.Model):
+class UserRegister(models.Model):
     name = models.CharField(max_length=100)
     lastname = models.CharField(max_length=50)
     mobile = models.IntegerField()

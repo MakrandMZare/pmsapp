@@ -32,14 +32,14 @@ class ProductDetail(View):
         return render(request,"app/productdetail.html",locals())
     
 class CustomerRegistrationView(View):
-    def get(self,request):
+    def get(self, request):
         form = CustomerRegistrationForm()
-        return render(request, 'app/customerregistration.html',locals())
-    def post(self,request):
+        return render(request,"app/customerregistration.html",locals())
+    def post(self, request):
         form = CustomerRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request,"Congratulations! User Register Successfully.")
         else:
             messages.warning(request,"Invalid Input Data.")
-            return render(request, 'app/customerregistration.html',locals())
+        return render(request,"app/customerregistration.html",locals())
