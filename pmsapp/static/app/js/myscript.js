@@ -1,6 +1,8 @@
+
+
 $('.plus-cart').click(function(){
     var id=$(this).attr("pid").toString();
-    var eml = this.parentNode.childred[2]
+    var eml = this.parentNode.children[2]
     $.ajax({
         type:"GET",
         url:"/pluscart",
@@ -17,7 +19,7 @@ $('.plus-cart').click(function(){
 
 $('.minus-cart').click(function(){
     var id=$(this).attr("pid").toString();
-    var eml = this.parentNode.childred[2]
+    var eml = this.parentNode.children[2]
     $.ajax({
         type:"GET",
         url:"/minuscart",
@@ -34,7 +36,7 @@ $('.minus-cart').click(function(){
 
 $('.remove-cart').click(function(){
     var id=$(this).attr("pid").toString();
-    var eml = this.parentNode.childred[2]
+    var eml = this.parentNode.children[2]
     $.ajax({
         type:"GET",
         url:"/removecart",
