@@ -1,10 +1,12 @@
 from django.db.models import Count
 from django.shortcuts import render, redirect
+import razorpay
 from django.views import View
 from . models import Cart, Customer, Product
 from . forms import CustomerProfileForm, CustomerRegistrationForm
 from django.contrib import messages
 from django.db.models import Q
+from django.conf import settings
 from django.http import JsonResponse
 
 
@@ -107,21 +109,26 @@ def show_cart(request):
     cart = Cart.objects.filter(user=user)
     amount = 0
     for p in cart:
-        value =p.quantity * p.product.discounted_price
+        value = p.quantity * p.product.discounted_price
         amount = amount + value
         totalamount = amount + 40        
     return render(request, 'app/addtocart.html',locals())
 
 class checkout(View):
     def get(self,request):
-        user = request.user 
-        add = Customer.objects.filter(user=user)
-        cart_items = Cart.objects.filter(user=user)
+        user=request.user 
+        add=Customer.objects.filter(user=user)
+        cart_items=Cart.objects.filter(user=user)
         famount = 0
         for p in cart_items:
             value = p.quantity * p.product.discounted_price
             famount = famount + value
-            totalamount = famount + 40
+        totalamount = famount + 40
+        razoramount = int(totalamount * 100)
+        razorpay_client = razorpay.Client(auth=(settings.RAZOR_KEY_ID, settings.RAZOR_KEY_SECRET))
+        data =  { "amount": razoramount, "currency": "INR", "receipt": "order_rcptid_11"}
+        payment_responce = razorpay_client.order.create(data=data)
+        print(payment_responce)
         return render(request, 'app/checkout.html',locals())
 
 def plus_cart(request):
