@@ -1,6 +1,5 @@
 from django.db.models import Count
 from django.shortcuts import render, redirect
-import razorpay
 from django.views import View
 from . models import Cart, Customer, Product
 from . forms import CustomerProfileForm, CustomerRegistrationForm
@@ -125,7 +124,7 @@ class checkout(View):
             famount = famount + value
         totalamount = famount + 40
         razoramount = int(totalamount * 100)
-        razorpay_client = razorpay.Client(auth=(settings.RAZOR_KEY_ID, settings.RAZOR_KEY_SECRET))
+        razorpay_client = auth=(settings.RAZOR_KEY_ID, settings.RAZOR_KEY_SECRET)
         data =  { "amount": razoramount, "currency": "INR", "receipt": "order_rcptid_11"}
         payment_responce = razorpay_client.order.create(data=data)
         print(payment_responce)
